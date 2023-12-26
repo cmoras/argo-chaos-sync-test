@@ -9,6 +9,6 @@ spec:
       - default
     labelSelectors:
       app: reviews
-  mode: all
+  mode: random
   action: pod-kill
-  gracePeriod: 30
+  gracePeriod: 50
