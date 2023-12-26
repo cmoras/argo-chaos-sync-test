@@ -1,0 +1,14 @@
+kind: PodChaos
+apiVersion: chaos-mesh.org/v1alpha1
+metadata:
+  namespace: default
+  name: argo-chaos-rating
+spec:
+  selector:
+    namespaces:
+      - default
+    labelSelectors:
+      app: ratings
+  mode: all
+  action: pod-kill
+  gracePeriod: 30
